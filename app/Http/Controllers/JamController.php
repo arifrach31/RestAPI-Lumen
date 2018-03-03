@@ -23,8 +23,7 @@ class JamController extends Controller {
   }
   public function update(Request $request, $id){
     DB:: table('jamsholat')->where('id', $id)->update([
-      "namasholat"=>$request->namasholat,
-      "waktusholat"=>$request->waktusholat
+      "isDone"=>$request->isDone
     ]);
     return 'ID '.$id.' berhasil diperbaharui';
   }
